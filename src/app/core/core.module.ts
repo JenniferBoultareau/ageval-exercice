@@ -1,7 +1,7 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PublicModule } from '../public/public.module';
-import { ActionComponent } from '../public/action/action.component';
+import { PlanActionComponent } from '../public/plan-action/plan-action.component';
 
 
 
@@ -11,7 +11,7 @@ import { ActionComponent } from '../public/action/action.component';
     CommonModule,
     PublicModule
   ],
-  exports: [ActionComponent]
+  exports: [PlanActionComponent]
 })
 export class CoreModule {
   constructor(@Optional() @SkipSelf() parentModule: CoreModule) {

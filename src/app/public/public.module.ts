@@ -3,21 +3,32 @@ import { FormsModule } from '@angular/forms';
 
 import { PublicRoutingModule } from './public-routing.module';
 import { SharedModule } from '../shared/shared.module';
-import { ActionComponent } from './action/action.component';
-import { TableComponent } from './action/table/table.component';
+
 import { ObjectifsService } from '../shared/services/objectifs.service';
-import { FormComponent } from './form/form.component';
+
+import { ActionComponent } from './plan-action/table/objectif/action/action.component';
 import { ContainerComponent } from './container/container.component';
+import { FormComponent } from './form/form.component';
+import { ObjectifComponent } from './plan-action/table/objectif/objectif.component';
+import { PlanActionComponent } from './plan-action/plan-action.component';
+import { TableComponent } from './plan-action/table/table.component';
 
 
 @NgModule({
-  declarations: [ActionComponent, TableComponent, FormComponent, ContainerComponent],
-  imports: [
-    SharedModule,
-    PublicRoutingModule,
-    FormsModule
+  declarations: [
+    ActionComponent,
+    ContainerComponent, 
+    FormComponent,
+    ObjectifComponent,
+    PlanActionComponent,
+    TableComponent
   ],
-  exports:[ActionComponent],
+  imports: [
+    FormsModule,
+    PublicRoutingModule,
+    SharedModule
+  ],
+  exports:[PlanActionComponent],
   providers: [ObjectifsService]
 })
 export class PublicModule { }

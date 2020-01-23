@@ -1,0 +1,29 @@
+table {
+  width: 100%;
+  tr {
+    th {
+      font-size: 12px;
+      background-color: #32a6bd;
+      color: white;
+      text-align: center;
+      border: 1px solid #e0e0e0;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  
+    td {
+      font-size: 12px;
+      background-color: #f2f0f1;
+      border: 1px solid #e0e0e0;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .modification {
+      text-align: center;
+      .fas {
+        font-size: 20px;
+      }
+    }
+  }
+}

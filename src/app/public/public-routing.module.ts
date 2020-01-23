@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FormComponent } from './form/form.component';
-import { ActionComponent } from './action/action.component';
+import { PlanActionComponent } from './plan-action/plan-action.component';
 import { ContainerComponent } from './container/container.component';
-import { Action } from 'rxjs/internal/scheduler/Action';
 
 
 const routes: Routes = [
@@ -13,7 +12,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: ActionComponent
+        component: PlanActionComponent
       }
     ]
   },

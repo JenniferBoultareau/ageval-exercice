@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ObjectifsService } from '../../shared/services/objectifs.service';
 
 @Component({
-  selector: 'pa-action',
-  templateUrl: './action.component.html',
-  styleUrls: ['./action.component.scss']
+  selector: 'pa-plan-action',
+  templateUrl: './plan-action.component.html',
+  styleUrls: ['./plan-action.component.scss']
 })
-export class ActionComponent implements OnInit {
+export class PlanActionComponent implements OnInit {
 
   public objectifs = [];
 
