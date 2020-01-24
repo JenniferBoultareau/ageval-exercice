@@ -1,9 +1,20 @@
 <div class="container">
 	<table>
-		<tr>
-			<th>{{ objectif.etablissement}}</th>
+		<tr class="nom-etablissement">
+			<th colspan="9">{{ objectif.etablissement}}</th>
+		</tr>
+		<tr class="objectif-title">
+			<th>Références</th>
+			<th>Objectifs</th>
+			<th>Thème</th>
+			<th>Sources</th>
+			<th>Responsables</th>
+			<th>Echéances</th>
+			<th>Priorités</th>
+			<th>Avancement</th>
+			<th></th>
 		</tr>
 	</table>
-	<pa-objectif></pa-objectif>
+	<pa-objectif *ngFor="let allObjectif of objectifs" [allObjectifs]="allObjectif"></pa-objectif>
 	<button routerLink="/formulaire" type="button" class="btn btn-info">Ajouter objectif</button>
 </div>

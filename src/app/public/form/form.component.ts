@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Objectif } from '../models/objectif.model';
 
 @Component({
   selector: 'pa-form',
@@ -8,14 +9,28 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class FormComponent implements OnInit {
 
-  objectifForm = new FormGroup({
-    objectifName: new FormControl(null, [Validators.required]),
-    
-  })
+  objectifForm: FormGroup;
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
+    this.initForm();
+  }
+
+  initForm() {
+    this.objectifForm = this.formBuilder.group({
+      nom: ['', Validators.required],
+      theme: ['', Validators.required]
+    });
+  }
+
+  onSubmitForm() {
+    // const formValue = this.objectifForm.value;
+    // const newObjectif = new Objectif(
+    //   formValue['nom'],
+    //   formValue['theme']
+    // );
+    console.log(this.objectifForm.value);
   }
 
 }

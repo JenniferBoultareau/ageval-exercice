@@ -1,11 +1,25 @@
 table {
 	width: 100%;
-	th {
-		font-size: 14px;
-		background-color: #559caa;
-		border: 1px solid #e0e0e0;
-		padding-top: 10px;
-    padding-bottom: 10px;
+	.nom-etablissement {
+		th {
+			font-size: 14px;
+			background-color: #559caa;
+			border: 1px solid #e0e0e0;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+	}
+
+	.objectif-title {
+		th {
+			font-size: 12px;
+			background-color: #32a6bd;
+			color: white;
+			text-align: center;
+			border: 1px solid #e0e0e0;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
 	}
 }
 

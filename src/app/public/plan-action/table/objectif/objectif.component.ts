@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'pa-objectif',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./objectif.component.scss']
 })
 export class ObjectifComponent implements OnInit {
+
+  @Input('allObjectifs') public allObjectif;
 
   constructor() { }
 

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { PublicRoutingModule } from './public-routing.module';
 import { SharedModule } from '../shared/shared.module';
@@ -26,6 +26,7 @@ import { TableComponent } from './plan-action/table/table.component';
   imports: [
     FormsModule,
     PublicRoutingModule,
+    ReactiveFormsModule,
     SharedModule
   ],
   exports:[PlanActionComponent],

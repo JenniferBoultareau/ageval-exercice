@@ -7,12 +7,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TableComponent implements OnInit {
 
-  @Input() objectif;
+  @Input('objectifObjectifs') public objectif;
+
+  @Input('objectifs') public objectifs;
 
   constructor() { }
 
   ngOnInit() {
-    
   }
 
 }

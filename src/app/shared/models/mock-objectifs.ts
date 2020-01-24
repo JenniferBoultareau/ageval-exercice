@@ -27,7 +27,7 @@ export const OBJECTIFS = [
                 ]
             },
             {
-                reference: '',
+                reference: 'test',
                 nom: 'Refonte des sites internet de la MFC',
                 themes: 'Réputation et image de l\'entreprise',
                 sources: 'Service communication',
@@ -108,7 +108,8 @@ export const OBJECTIFS = [
                         etat: 'En cours'
                     }
                 ]
-            }
+            },
+            
         ]
     }
 ];
