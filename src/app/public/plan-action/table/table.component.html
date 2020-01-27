@@ -15,6 +15,6 @@
 			<th></th>
 		</tr>
 	</table>
-	<pa-objectif *ngFor="let allObjectif of objectifs" [allObjectifs]="allObjectif"></pa-objectif>
+	<pa-objectif *ngFor="let obj of objectif.objectifs" [Objectifs]="obj"></pa-objectif>
 	<button routerLink="/formulaire" type="button" class="btn btn-info">Ajouter objectif</button>
 </div>
