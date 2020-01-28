@@ -1,23 +1,24 @@
 <table>
 	<tr>
-		<td>{{ obj.reference }}</td>
-		<td>{{ obj.nom }}</td>
-		<td>{{ obj.themes }}</td>
-		<td>{{ obj.sources }}</td>
-		<td>{{ obj.reponsables }}</td>
-		<td>{{ obj.echeances }}</td>
-		<td>{{ obj.priorites }}</td>
-		<td>{{ obj.avancement }}</td>
+		<td class="references">{{ obj.reference }}</td>
+		<td class="objectifs">{{ obj.nom }}</td>
+		<td class="theme">{{ obj.themes }}</td>
+		<td class="sources">{{ obj.sources }}</td>
+		<td class="responsables">{{ obj.reponsables }}</td>
+		<td class="echeances">{{ obj.echeances }}</td>
+		<td class="priorités">{{ obj.priorites }}</td>
+		<td class="avancement">{{ obj.avancement }}</td>
 		<td class="modification">
 			<i class="fas fa-pencil-alt"></i><br>
 			<i class="fas fa-trash-alt"></i>
 		</td>
 	</tr>
 	<tr>
-    <th>Actions</th>
-    <th>Pilotes</th>
-    <th colspan="2"></th>
-    <th>Echéances</th>
+    <th colspan="4">Actions</th>
+    <th class="pilotes">Pilotes</th>
+		<th class="echeances-action">Echéances</th>
+    <th class="informations"></th>
+		<th colspan="2"></th>
   </tr>
 </table>
 <pa-action *ngFor="let action of obj.actions" [action]="action"></pa-action>

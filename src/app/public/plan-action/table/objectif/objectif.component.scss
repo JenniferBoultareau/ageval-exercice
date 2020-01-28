@@ -17,9 +17,42 @@ table {
       padding-top: 10px;
       padding-bottom: 10px;
     }
+    .references {
+      width: 130px;
+      padding-left: 5px;
+		}
+		.objectifs {
+      width: 299px;
+      padding-left: 5px;
+		}
+		.theme{
+      width: 130px;
+      padding-left: 5px;
+		}
+		.sources {
+      width: 130px;
+      padding-left: 5px;
+		}
+		.responsables{
+      text-align: center;
+			width: 100px;
+		}
+		.echeances {
+      text-align: center;
+			width: 90px;
+		}
+		.priorités {
+      text-align: center;
+			width: 70px;
+		}
+		.avancement {
+      text-align: center;
+			width: 90px;
+		}
 
     .modification {
       text-align: center;
+      width: 70px;
       .fas {
         font-size: 20px;
       }

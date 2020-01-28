@@ -4,15 +4,15 @@
 			<th colspan="9">{{ objectif.etablissement}}</th>
 		</tr>
 		<tr class="objectif-title">
-			<th>Références</th>
-			<th>Objectifs</th>
-			<th>Thème</th>
-			<th>Sources</th>
-			<th>Responsables</th>
-			<th>Echéances</th>
-			<th>Priorités</th>
-			<th>Avancement</th>
-			<th></th>
+			<th class="references">Références</th>
+			<th class="objectifs">Objectifs</th>
+			<th class="theme">Thème</th>
+			<th class="sources">Sources</th>
+			<th class="responsables">Responsables</th>
+			<th class="echeances">Echéances</th>
+			<th class="priorités">Priorités</th>
+			<th class="avancement">Avancement</th>
+			<th class="modification"></th>
 		</tr>
 	</table>
 	<pa-objectif *ngFor="let obj of objectif.objectifs" [Objectifs]="obj"></pa-objectif>
