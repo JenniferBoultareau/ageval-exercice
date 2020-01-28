@@ -1,18 +1,18 @@
 <table>
-  <tr>
+  <!-- <tr>
     <th>Actions</th>
     <th>Pilotes</th>
     <th colspan="2"></th>
     <th>Echéances</th>
-  </tr>
+  </tr> -->
   <tr>
-    <td>Actualiser la formation</td>
-    <td></td>
-    <td></td>
+    <td>{{ action.nom }}</td>
+    <td>{{ action.pilotes }}</td>
+    <td>{{ action.echeances }}</td>
     <td class="information">
       <i class="fas fa-info"></i>
     </td>
-    <td>Non traité</td>
+    <td>{{ action.etat }}</td>
   </tr>
 </table>
 

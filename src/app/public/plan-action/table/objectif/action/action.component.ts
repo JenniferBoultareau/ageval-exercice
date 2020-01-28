@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'pa-action',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./action.component.scss']
 })
 export class ActionComponent implements OnInit {
+
+  @Input('action') public action;
 
   constructor() { }
 

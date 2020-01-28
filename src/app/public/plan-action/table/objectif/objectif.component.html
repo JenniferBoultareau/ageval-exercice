@@ -13,5 +13,11 @@
 			<i class="fas fa-trash-alt"></i>
 		</td>
 	</tr>
+	<tr>
+    <th>Actions</th>
+    <th>Pilotes</th>
+    <th colspan="2"></th>
+    <th>Echéances</th>
+  </tr>
 </table>
-<pa-action></pa-action>
+<pa-action *ngFor="let action of obj.actions" [action]="action"></pa-action>
