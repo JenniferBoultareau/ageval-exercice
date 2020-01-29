@@ -1,6 +1,7 @@
 import { Action } from './action.model';
 
 export class Objectif {
+  public id: number;
   public reference: string;
   public nom: string;
   public themes: string;

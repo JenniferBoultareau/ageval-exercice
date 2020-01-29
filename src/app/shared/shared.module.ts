@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgxBootstrapModule } from './modules/ngx-bootstrap.module';
-import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -9,8 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [],
   imports: [
     CommonModule,
-    NgxBootstrapModule,
-    HttpClientModule
+    NgxBootstrapModule
   ],
   exports:[
     CommonModule,

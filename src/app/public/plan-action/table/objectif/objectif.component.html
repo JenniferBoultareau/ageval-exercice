@@ -1,13 +1,13 @@
 <table>
 	<tr>
-		<td class="references">{{ obj.reference }}</td>
-		<td class="objectifs">{{ obj.nom }}</td>
-		<td class="theme">{{ obj.themes }}</td>
-		<td class="sources">{{ obj.sources }}</td>
-		<td class="responsables">{{ obj.reponsables }}</td>
-		<td class="echeances">{{ obj.echeances }}</td>
-		<td class="priorités">{{ obj.priorites }}</td>
-		<td class="avancement">{{ obj.avancement }}</td>
+		<td class="references">{{ objectif.reference }}</td>
+		<td class="objectifs">{{ objectif.nom }}</td>
+		<td class="theme">{{ objectif.themes }}</td>
+		<td class="sources">{{ objectif.sources }}</td>
+		<td class="responsables">{{ objectif.reponsables }}</td>
+		<td class="echeances">{{ objectif.echeances }}</td>
+		<td class="priorités">{{ objectif.priorites }}</td>
+		<td class="avancement">{{ objectif.avancement }}</td>
 		<td class="modification">
 			<i class="fas fa-pencil-alt"></i><br>
 			<i class="fas fa-trash-alt"></i>
@@ -21,4 +21,4 @@
 		<th colspan="2"></th>
   </tr>
 </table>
-<pa-action *ngFor="let action of obj.actions" [action]="action"></pa-action>
+<pa-action *ngFor="let action of objectif.actions" [action]="action"></pa-action>

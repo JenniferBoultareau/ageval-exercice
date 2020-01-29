@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ObjectifComponent implements OnInit {
 
-  @Input('Objectifs') public obj;
+  @Input('Objectif') public objectif;
 
   constructor() { }
 

@@ -1,7 +1,7 @@
 <div class="container">
 	<table>
 		<tr class="nom-etablissement">
-			<th colspan="9">{{ objectif.etablissement}}</th>
+			<th colspan="9">{{ planAction.etablissement}}</th>
 		</tr>
 		<tr class="objectif-title">
 			<th class="references">Références</th>
@@ -15,6 +15,6 @@
 			<th class="modification"></th>
 		</tr>
 	</table>
-	<pa-objectif *ngFor="let obj of objectif.objectifs" [Objectifs]="obj"></pa-objectif>
+	<pa-objectif *ngFor="let objectif of planAction.objectifs" [Objectif]="objectif"></pa-objectif>
 	<button routerLink="/formulaire" type="button" class="btn btn-info">Ajouter objectif</button>
 </div>
