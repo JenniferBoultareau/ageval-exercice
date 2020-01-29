@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-import { PlanAction } from '../models/plan-action.model';
 import { HttpClient } from '@angular/common/http';
+
+import { PlanAction } from '../models/plan-action.model';
+import { Objectif } from '../models/objectif.model';
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +17,7 @@ export class PlanActionService {
     return this.http.get<PlanAction[]>(this.apiUrl);
   }
 
-  // addObjectif(objectif: Objectif) {
-  //   this.objectifs.push(objectif);
-  //   this.getObjectifs();
-  // }
+  addObjectifs(objectif) {
+    return this.http.post<Objectif[]>(this.apiUrl, objectif);
+  }
 }

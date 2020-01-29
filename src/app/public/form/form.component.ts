@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Objectif } from '../models/objectif.model';
 
 @Component({
   selector: 'pa-form',
@@ -27,7 +26,7 @@ export class FormComponent implements OnInit {
       objectifResponsable: ['', Validators.required],
       objectifEcheance: ['', Validators.required],
       objectifPriorite: ['', Validators.required],
-      actionName: ['', Validators.required],
+      actionNom: ['', Validators.required],
       actionPilote: ['', Validators.required],
       actionEcheance: ['', Validators.required],
     });

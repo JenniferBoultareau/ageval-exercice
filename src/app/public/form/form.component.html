@@ -122,16 +122,16 @@
       </div>
   
       <div class="form-group col">
-        <label for="actionPilotes">Pilotes de l'action</label>
+        <label for="actionPilote">Pilotes de l'action</label>
         <input
           type="text"
           class="form-control"
-          id="actionPilotes"
+          id="actionPilote"
           placeholder="Nom de l'objectif"
-          formControlName="actionPilotes"
-          [ngClass]="{ 'is-invalid': submitted && c.actionPilotes.errors }"/>
-        <div *ngIf="submitted && c.actionPilotes.errors" class="invalid-feedback">
-            <div *ngIf="c.actionPilotes.errors.required">Les pilotes de l'action sont requis</div>
+          formControlName="actionPilote"
+          [ngClass]="{ 'is-invalid': submitted && c.actionPilote.errors }"/>
+        <div *ngIf="submitted && c.actionPilote.errors" class="invalid-feedback">
+            <div *ngIf="c.actionPilote.errors.required">Les pilotes de l'action sont requis</div>
         </div>
       </div>
   
