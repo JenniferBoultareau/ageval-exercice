@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ObjectifsService } from '../../shared/services/objectifs.service';
+import { Objectif } from '../models/objectif.model';
 
 @Component({
   selector: 'pa-plan-action',
@@ -8,12 +9,17 @@ import { ObjectifsService } from '../../shared/services/objectifs.service';
 })
 export class PlanActionComponent implements OnInit {
 
-  public objectifs = [];
+  public objectifs: Objectif[] = [];
 
   constructor(private objectifService: ObjectifsService) { }
 
   ngOnInit() {
-    this.objectifs = this.objectifService.getObjectifs()
+    this.getObjectifs();
+  }
+
+  getObjectifs() {
+    this.objectifService.getObjectifs()
+      .subscribe(objectifs => this.objectifs = objectifs)
   }
 
 }
