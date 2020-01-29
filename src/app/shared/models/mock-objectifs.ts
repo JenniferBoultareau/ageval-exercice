@@ -27,7 +27,7 @@ export const OBJECTIFS = [
         ]
       },
       {
-        reference: 'test',
+        reference: 'référence 1',
         nom: 'Refonte des sites internet de la MFC',
         themes: 'Réputation et image de l\'entreprise',
         sources: 'Service communication',
@@ -45,7 +45,7 @@ export const OBJECTIFS = [
         ]
       },
       {
-        reference: 'reference 3',
+        reference: 'reference 2',
         nom: 'Refonte des sites internet de la MFC',
         themes: 'Réputation et image de l\'entreprise',
         sources: 'Service communication',
@@ -92,7 +92,7 @@ export const OBJECTIFS = [
         ]
       },
       {
-        reference: 'reference 2',
+        reference: 'reference 3',
         nom: 'Nouveau moyen de prévention',
         themes: 'Droits et informations du patient/résident',
         sources: 'Evaluations',

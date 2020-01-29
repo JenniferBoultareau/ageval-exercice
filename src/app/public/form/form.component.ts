@@ -10,6 +10,7 @@ import { Objectif } from '../models/objectif.model';
 export class FormComponent implements OnInit {
 
   objectifForm: FormGroup;
+  submitted = false;
 
   constructor(private formBuilder: FormBuilder) { }
 
@@ -19,12 +20,28 @@ export class FormComponent implements OnInit {
 
   initForm() {
     this.objectifForm = this.formBuilder.group({
-      nom: ['', Validators.required],
-      theme: ['', Validators.required]
+      objectifReference: ['', Validators.required],
+      objectifNom: ['', Validators.required],
+      objectifTheme: ['', Validators.required],
+      objectifSource: ['', Validators.required],
+      objectifResponsable: ['', Validators.required],
+      objectifEcheance: ['', Validators.required],
+      objectifPriorite: ['', Validators.required],
+      actionName: ['', Validators.required],
+      actionPilote: ['', Validators.required],
+      actionEcheance: ['', Validators.required],
     });
   }
 
+  get c() { 
+    return this.objectifForm.controls; 
+  }
+
   onSubmitForm() {
+    this.submitted = true;
+    if (this.objectifForm.invalid) {
+      return;
+    }
     // const formValue = this.objectifForm.value;
     // const newObjectif = new Objectif(
     //   formValue['nom'],
