@@ -3,153 +3,106 @@
   <form (ngSubmit)="onSubmitForm()" [formGroup]="objectifForm">
     <div class="form-group row">
       <div class="form-group col">
-        <label for="objectifReference">Référence de l'objectif</label>
-        <input
-          type="text"
-          class="form-control"
-          id="objectifReference"
-          placeholder="Référence de l'objectif"
-          formControlName="objectifReference"
-          [ngClass]="{ 'is-invalid': submitted && c.objectifReference.errors }"/>
-        <div *ngIf="submitted && c.objectifReference.errors" class="invalid-feedback">
-            <div *ngIf="c.objectifReference.errors.required">La référence de l'objectif est requise</div>
+        <label for="reference">Référence de l'objectif</label>
+        <input type="text" class="form-control" id="reference" placeholder="Référence de l'objectif"
+          formControlName="reference" [ngClass]="{ 'is-invalid': submitted && c.reference.errors }" />
+        <div *ngIf="submitted && c.reference.errors" class="invalid-feedback">
+          <div *ngIf="c.reference.errors.required">La référence de l'objectif est requise</div>
         </div>
       </div>
 
       <div class="form-group col">
-        <label for="objectifNom">Nom de l'objectif</label>
-        <input
-          type="text"
-          class="form-control"
-          id="objectifNom"
-          placeholder="Nom de l'objectif"
-          formControlName="objectifNom"
-          [ngClass]="{ 'is-invalid': submitted && c.objectifNom.errors }"/>
-        <div *ngIf="submitted && c.objectifNom.errors" class="invalid-feedback">
-            <div *ngIf="c.objectifNom.errors.required">Le nom de l'objectif est requis</div>
+        <label for="nom">Nom de l'objectif</label>
+        <input type="text" class="form-control" id="nom" placeholder="Nom de l'objectif"
+          formControlName="nom" [ngClass]="{ 'is-invalid': submitted && c.nom.errors }" />
+        <div *ngIf="submitted && c.nom.errors" class="invalid-feedback">
+          <div *ngIf="c.nom.errors.required">Le nom de l'objectif est requis</div>
         </div>
       </div>
-  </div>
-
-  <div class="form-group row">
-    <div class="form-group col">
-      <label for="objectifTheme">Thème de l'objectif</label>
-      <input
-        type="text"
-        class="form-control"
-        id="objectifTheme"
-        placeholder="Nom de l'objectif"
-        formControlName="objectifTheme"
-        [ngClass]="{ 'is-invalid': submitted && c.objectifTheme.errors }"/>
-      <div *ngIf="submitted && c.objectifTheme.errors" class="invalid-feedback">
-          <div *ngIf="c.objectifTheme.errors.required">Le thème de l'objectif est requis</div>
-      </div>
     </div>
 
-    <div class="form-group col">
-      <label for="objectifSource">Sources de l'objectif</label>
-      <input
-        type="text"
-        class="form-control"
-        id="objectifSource"
-        placeholder="Nom de l'objectif"
-        formControlName="objectifSource"
-        [ngClass]="{ 'is-invalid': submitted && c.objectifSource.errors }"/>
-      <div *ngIf="submitted && c.objectifSource.errors" class="invalid-feedback">
-          <div *ngIf="c.objectifSource.errors.required">Les sources de l'objectif sont requises</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="form-group row">
-    <div class="form-group col">
-      <label for="objectifResponsable">Responsable de l'objectif</label>
-      <input
-        type="text"
-        class="form-control"
-        id="objectifResponsable"
-        placeholder="Nom de l'objectif"
-        formControlName="objectifResponsable"
-        [ngClass]="{ 'is-invalid': submitted && c.objectifResponsable.errors }"/>
-      <div *ngIf="submitted && c.objectifResponsable.errors" class="invalid-feedback">
-          <div *ngIf="c.objectifResponsable.errors.required">Le responsable de l'objectif est requis</div>
-      </div>
-    </div>
-
-    <div class="form-group col">
-      <label for="objectifEcheance">Echéance de l'objectif</label>
-      <input
-        type="text"
-        class="form-control"
-        id="objectifEcheance"
-        placeholder="Nom de l'objectif"
-        formControlName="objectifEcheance"
-        [ngClass]="{ 'is-invalid': submitted && c.objectifEcheance.errors }"/>
-      <div *ngIf="submitted && c.objectifEcheance.errors" class="invalid-feedback">
-          <div *ngIf="c.objectifEcheance.errors.required">L'échéance de l'objectif est requise</div>
-      </div>
-    </div>
-
-    <div class="form-group col">
-      <label for="objectifPriorite">Priorité de l'objectif</label>
-      <input
-        type="text"
-        class="form-control"
-        id="objectifPriorite"
-        placeholder="Nom de l'objectif"
-        formControlName="objectifPriorite"
-        [ngClass]="{ 'is-invalid': submitted && c.objectifPriorite.errors }"/>
-      <div *ngIf="submitted && c.objectifPriorite.errors" class="invalid-feedback">
-          <div *ngIf="c.objectifPriorite.errors.required">La priorité de l'objectif est requise</div>
-      </div>
-    </div>
-  </div>
-
-    <p>Action à réaliser :</p>
     <div class="form-group row">
       <div class="form-group col">
-        <label for="actionNom">Nom de l'action</label>
-        <input
-          type="text"
-          class="form-control"
-          id="actionNom"
-          placeholder="Nom de l'objectif"
-          formControlName="actionNom"
-          [ngClass]="{ 'is-invalid': submitted && c.actionNom.errors }"/>
-        <div *ngIf="submitted && c.actionNom.errors" class="invalid-feedback">
-            <div *ngIf="c.actionNom.errors.required">Le nom de l'action est requis</div>
+        <label for="themes">Thème de l'objectif</label>
+        <input type="text" class="form-control" id="themes" placeholder="Thèmes de l'objectif"
+          formControlName="themes" [ngClass]="{ 'is-invalid': submitted && c.themes.errors }" />
+        <div *ngIf="submitted && c.themes.errors" class="invalid-feedback">
+          <div *ngIf="c.themes.errors.required">Le thème de l'objectif est requis</div>
         </div>
       </div>
-  
+
       <div class="form-group col">
-        <label for="actionPilote">Pilotes de l'action</label>
-        <input
-          type="text"
-          class="form-control"
-          id="actionPilote"
-          placeholder="Nom de l'objectif"
-          formControlName="actionPilote"
-          [ngClass]="{ 'is-invalid': submitted && c.actionPilote.errors }"/>
-        <div *ngIf="submitted && c.actionPilote.errors" class="invalid-feedback">
-            <div *ngIf="c.actionPilote.errors.required">Les pilotes de l'action sont requis</div>
-        </div>
-      </div>
-  
-      <div class="form-group col">
-        <label for="actionEcheance">Echéance de l'action</label>
-        <input
-          type="text"
-          class="form-control"
-          id="actionEcheance"
-          placeholder="Nom de l'objectif"
-          formControlName="actionEcheance"
-          [ngClass]="{ 'is-invalid': submitted && c.actionEcheance.errors }"/>
-        <div *ngIf="submitted && c.actionEcheance.errors" class="invalid-feedback">
-            <div *ngIf="c.actionEcheance.errors.required">L'échéance de l'action est requise</div>
+        <label for="sources">Sources de l'objectif</label>
+        <input type="text" class="form-control" id="sources" placeholder="Sources de l'objectif"
+          formControlName="sources" [ngClass]="{ 'is-invalid': submitted && c.sources.errors }" />
+        <div *ngIf="submitted && c.sources.errors" class="invalid-feedback">
+          <div *ngIf="c.sources.errors.required">Les sources de l'objectif sont requises</div>
         </div>
       </div>
     </div>
-        
+
+    <div class="form-group row">
+      <div class="form-group col">
+        <label for="responsables">Responsable de l'objectif</label>
+        <input type="text" class="form-control" id="responsables" placeholder="Responsables de l'objectif"
+          formControlName="responsables"
+          [ngClass]="{ 'is-invalid': submitted && c.responsables.errors }" />
+        <div *ngIf="submitted && c.responsables.errors" class="invalid-feedback">
+          <div *ngIf="c.responsables.errors.required">Le responsable de l'objectif est requis</div>
+        </div>
+      </div>
+
+      <div class="form-group col">
+        <label for="echeances">Echéance de l'objectif</label>
+        <input type="text" class="form-control" id="echeances" placeholder="Echéances de l'objectif"
+          formControlName="echeances" [ngClass]="{ 'is-invalid': submitted && c.echeances.errors }" />
+        <div *ngIf="submitted && c.echeances.errors" class="invalid-feedback">
+          <div *ngIf="c.echeances.errors.required">L'échéance de l'objectif est requise</div>
+        </div>
+      </div>
+
+      <div class="form-group col">
+        <label for="priorites">Priorité de l'objectif</label>
+        <input type="text" class="form-control" id="priorites" placeholder="Priorités de l'objectif"
+          formControlName="priorites" [ngClass]="{ 'is-invalid': submitted && c.priorites.errors }" />
+        <div *ngIf="submitted && c.priorites.errors" class="invalid-feedback">
+          <div *ngIf="c.priorites.errors.required">La priorité de l'objectif est requise</div>
+        </div>
+      </div>
+    </div>
+
+    <div formGroupName="actions">
+      <p>Action à réaliser :</p>
+      <div class="form-group row">
+        <div class="form-group col">
+          <label for="nom">Nom de l'action</label>
+          <input type="text" class="form-control" id="nom" placeholder="Nom de l'action"
+            formControlName="nom" [ngClass]="{ 'is-invalid': submitted && c.nom.errors }" />
+          <div *ngIf="submitted && c.nom.errors" class="invalid-feedback">
+            <div *ngIf="c.nom.errors.required">Le nom de l'action est requis</div>
+          </div>
+        </div>
+
+        <div class="form-group col">
+          <label for="pilotes">Pilotes de l'action</label>
+          <input type="text" class="form-control" id="pilotes" placeholder="Pilotes de l'action"
+            formControlName="pilotes" [ngClass]="{ 'is-invalid': submitted && c.pilotes.errors }" />
+          <div *ngIf="submitted && c.pilotes.errors" class="invalid-feedback">
+            <div *ngIf="c.pilotes.errors.required">Les pilotes de l'action sont requis</div>
+          </div>
+        </div>
+
+        <div class="form-group col">
+          <label for="echeances">Echéance de l'action</label>
+          <input type="text" class="form-control" id="echeances" placeholder="Echéances de l'action"
+            formControlName="echeances" [ngClass]="{ 'is-invalid': submitted && c.echeances.errors }" />
+          <div *ngIf="submitted && c.echeances.errors" class="invalid-feedback">
+            <div *ngIf="c.echeances.errors.required">L'échéance de l'action est requise</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <button type="submit" class="btn btn-primary">Envoyer</button>
   </form>
 </div>

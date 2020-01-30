@@ -18,6 +18,6 @@ export class PlanActionService {
   }
 
   addObjectifs(objectif) {
-    return this.http.post<Objectif[]>(this.apiUrl, objectif);
+    return this.http.post<Objectif>(this.apiUrl, objectif);
   }
 }

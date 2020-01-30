@@ -12,7 +12,7 @@
           "sources": "Direction achats logistiques",
           "reponsables": "Andy Lecoq",
           "echeances": "13/03/2020",
-          "priorites": 1,
+          "priorites": "1",
           "avancement": 0.5,
           "actions": [
             {
@@ -39,7 +39,7 @@
           "sources": "Service communication",
           "reponsables": "Andy Lecoq",
           "echeances": "1/01/2021",
-          "priorites": 2,
+          "priorites": "2",
           "avancement": 0.4,
           "actions": [
             {
@@ -59,7 +59,7 @@
           "sources": "Service communication",
           "reponsables": "Andy Lecoq",
           "echeances": "1/01/2021",
-          "priorites": 2,
+          "priorites": "2",
           "avancement": 0.4,
           "actions": [
             {
@@ -85,7 +85,7 @@
           "sources": "Agerisq",
           "reponsables": "Andy Lecoq",
           "echeances": "13/03/2020",
-          "priorites": 1,
+          "priorites": "1",
           "avancement": 0.5,
           "actions": [
             {
@@ -112,7 +112,7 @@
           "sources": "Evaluations",
           "reponsables": "Andy Lecoq",
           "echeances": "1/01/2021",
-          "priorites": 2,
+          "priorites": "2",
           "avancement": 0.4,
           "actions": [
             {

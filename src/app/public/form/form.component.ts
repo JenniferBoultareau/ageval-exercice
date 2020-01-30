@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { PlanActionService } from '../services/planAction.service';
+import { Objectif } from '../models/objectif.model';
 
 @Component({
   selector: 'pa-form',
@@ -10,8 +13,11 @@ export class FormComponent implements OnInit {
 
   objectifForm: FormGroup;
   submitted = false;
+  public objectifs: Objectif[] = [];
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,
+              private planActionService: PlanActionService,
+              private router: Router) { }
 
   ngOnInit() {
     this.initForm();
@@ -19,16 +25,18 @@ export class FormComponent implements OnInit {
 
   initForm() {
     this.objectifForm = this.formBuilder.group({
-      objectifReference: ['', Validators.required],
-      objectifNom: ['', Validators.required],
-      objectifTheme: ['', Validators.required],
-      objectifSource: ['', Validators.required],
-      objectifResponsable: ['', Validators.required],
-      objectifEcheance: ['', Validators.required],
-      objectifPriorite: ['', Validators.required],
-      actionNom: ['', Validators.required],
-      actionPilote: ['', Validators.required],
-      actionEcheance: ['', Validators.required],
+      reference: ['', Validators.required],
+      nom: ['', Validators.required],
+      themes: ['', Validators.required],
+      sources: ['', Validators.required],
+      responsables: ['', Validators.required],
+      echeances: ['', Validators.required],
+      priorites: ['', Validators.required],
+      actions: this.formBuilder.group({
+        nom: ['', Validators.required],
+        pilotes: ['', Validators.required],
+        echeances: ['', Validators.required]
+      }),
     });
   }
 
@@ -41,12 +49,14 @@ export class FormComponent implements OnInit {
     if (this.objectifForm.invalid) {
       return;
     }
-    // const formValue = this.objectifForm.value;
-    // const newObjectif = new Objectif(
-    //   formValue['nom'],
-    //   formValue['theme']
-    // );
-    console.log(this.objectifForm.value);
+    const formValue = this.objectifForm.value;
+
+    this.planActionService.addObjectifs(formValue)
+        .subscribe((objectif) => {
+          this.objectifs = [objectif, ...this.objectifs]
+        });
+    console.log(formValue);
+    this.router.navigate(['']);
   }
 
 }
